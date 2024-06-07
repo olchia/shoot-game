@@ -30,7 +30,7 @@ running = True
 while running:
     screen.fill(colour)
     for event in pygame.event.get():
-        if event.type == pygame.quit:
+        if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.MOUSEBUTTONDOWN:
             mouse_x, mouse_y = pygame.mouse.get_pos()
@@ -39,6 +39,7 @@ while running:
                 target_y = random.randint(0, SCREEN_HEIGHT - target_height)
     screen.blit(target_img, (target_x, target_y))
     pygame.display.update()
+
 
 # Игра завершится, когда мы выйдем из цикла (он будет закончен)
 pygame.quit()
